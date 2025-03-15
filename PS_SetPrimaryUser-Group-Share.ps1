@@ -136,6 +136,7 @@ $ClientSecretCredential = New-Object -TypeName System.Management.Automation.PSCr
 Connect-MgGraph  -TenantId $tenantid -ClientSecretCredential $ClientSecretCredential
 #############################################################################
 
+# Replace the Device Group Name with the group you want to change the Primary Users to the last logged-on user.
 $deviceGroupName = "_AAD-Test-PrimaryUser"
 
 $GroupId = Get-MgGroup -Filter "displayname eq '$deviceGroupName'"
